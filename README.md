@@ -1,1 +1,1 @@
-cours-VII-javascript
+# Javascript Vanilla
