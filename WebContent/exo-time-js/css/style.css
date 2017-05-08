@@ -1,0 +1,78 @@
+/*
+ * Exo 1
+ */
+html {
+  height: 100%;
+  background: white;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 40px 0 100px;
+  width: 680px;
+}
+
+body {
+  min-height: 100%;
+  width: 600px;
+  margin: 0 auto; /* center */
+  padding: 0 20px;
+  border: 1px solid black;
+  background: #eee;
+  /* Shadow */
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
+  /* display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body > div {
+  flex: 1 0 auto;
+}
+
+/*
+ * Exo 2
+ */    
+#bid {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  width: 600px;
+  margin: 50px auto;
+  font-size: 2em;
+}
+
+#bid > * {
+  flex: 0 0 auto;
+}
+
+#current {
+  flex: 1 0 auto;
+}
+/* Nouveauté : les pseudos-éléments ::before / ::after */
+#current::after {
+  content: " €";
+}
+
+#form {
+  padding-top: 100px;
+  width: 300px;
+  margin: auto;
+}
+
+#amount {
+  border: 1px solid #ccc;
+  padding: 7px 12px;
+  height: 40px;
+  width: 260px;
+}
+
+#form button {
+  float: right;
+  height: 40px;
+  width: 40px;
+  background: #000;
+  color: #fff;
+  border: 0;
+}
