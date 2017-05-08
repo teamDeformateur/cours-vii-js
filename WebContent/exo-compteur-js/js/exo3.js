@@ -85,20 +85,6 @@ function testColor(value) {
   var lengthOk = value.length === 4 || value.length === 7;
 
   // Renvoie un booléen
-  // if (startWithHash && lengthOk) {
-  //   return true;
-  // }
-  // else {
-  //   return false;
-  // }
-
-  // Pas besoin du else !
-  // if (startWithHash && lengthOk) {
-  //   return true;
-  // }
-  // return false;
-
-  // Pas besoin du if non plus !
   return startWithHash && lengthOk;
 }
 

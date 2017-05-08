@@ -6,8 +6,7 @@ Créer un compteur de clics.
 
 ## Exo 2 : sondage
 
-On peut cliquer sur deux boutons, et il faut compteur
-le nombre de clics sur chacun d'eux :
+On peut cliquer sur deux boutons, et il faut compter le nombre de clics sur chacun d'eux :
 
 ![exo2](exo2.png)
 
