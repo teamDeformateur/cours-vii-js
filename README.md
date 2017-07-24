@@ -119,7 +119,11 @@ FilmOscarise.prototype = Object.create(FilmComplet.prototype);
 FilmOscarise.prototype.constructor = FilmOscarise;
 ```
 ### JSON
-JavaScriptObjectNotation, format de fichier pur données.
+JavaScriptObjectNotation
+* format de fichier pûrement données
+* guillements
+* attention au [format](https://jsonlint.com/)
+
 ```javascript
 {
     nom: "Karktor",
@@ -155,5 +159,34 @@ personnage.classes[1];
     }
 ]
 ```
-
+## DOM
+Document Object Model
+### Rechercher dans le DOM
+#### getElementById
+#### querySelector
+Le querySelector permet de recherche en fonction de sélecteurs plutôt qu'à partir d'un id ou d'un nom. Bien sûr, le sélecteur choisi peut être un ID. Les sélecteurs sont ceux de CSS.
+```javascript
+var element = document.querySelector('#wrapper');
+```
+##### Raccourci (en mode flemme)
+JQuery n'a rien inventé sur ce point, la preuve :
+```javascript
+// N'en récupérer qu'un seul
+function $(selector, el) {
+     if (!el)
+     {
+        el = document;
+     }
+     return el.querySelector(selector);
+}
+// Récupérer tous les éléments
+function $$(selector, el) {
+     if (!el) 
+     {
+        el = document;
+     }
+     return el.querySelectorAll(selector);
+}
+var element = $('#wrapper');
+```
 
