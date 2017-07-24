@@ -77,9 +77,9 @@ var speed = Object.create(bound);
 ```
 
 ### Prototypes
-Les objets héritent des fonctionnalités d'autres objets. Cependant, c'est un mécanisme différent de l'héritange en POO.
+Les objets héritent des fonctionnalités d'autres objets. Cependant, c'est un mécanisme différent de l'héritage en POO.
 #### Définition
-Un prototype est un modèle d'objet (template) qui fait hériter ses propriétés et méthode, lui-même peut avoir un prototype et ainsi de suite : c'est la prototype chain.
+Un prototype est un modèle d'objet (template) qui fait hériter ses propriétés et méthodes, lui-même peut avoir un prototype et ainsi de suite : c'est la prototype chain.
 En POO classique, une classe est définie puis lorsque des instances sont créées, toutes les propriétés et méthodes définies dans la classe sont copiées à l'instance. En JS, un lien est fait entre l'instance et son prototype (propriété `__proto__` de l'objet). Ainsi, les propriétés et méthodes sont trouvées en parcourant la chaîne de prototypes.
 #### Accès
 Il est possible d'obtenir le prototype d'un objet en invoquant la méthode `Object.getPrototypeOf()`. Ou d'y accéder par la propriété (dépréciée) __proto__.
@@ -117,6 +117,43 @@ function FilmOscarise(titre, annee, realisateurs, executif, delegue, ceremonie){
 FilmOscarise.prototype = Object.create(FilmComplet.prototype);
 // redéfinir le bon constructeur 
 FilmOscarise.prototype.constructor = FilmOscarise;
+```
+### JSON
+JavaScriptObjectNotation, format de fichier pur données.
+```javascript
+{
+    nom: "Karktor",
+    classes : ["paladin", "prètre"],
+    magies : {
+        feu : ["boule"],
+        glace : ["tempête","rayon"]
+    }
+}
+
+// accès en notation habituelle en supposant qu'un script JS a récupéré les données et les a placées dans une variable 'personnage'
+personnage.magies['feu'];
+personnage.classes[1];
+```
+#### JSON sous format Array
+```javascript
+[
+    {
+        nom: "Karktor",
+        classes : ["paladin", "prètre"],
+        magies : {
+            feu : ["boule"],
+            glace : ["tempête","rayon"]
+        }
+    },
+    {
+        nom: "Korgan",
+        classes : ["voleur", "assasin"],
+        habilites : {
+            pieges : ["ours", "chausse-trapes"],
+            special : ["assassinat"]
+        }
+    }
+]
 ```
 
 
