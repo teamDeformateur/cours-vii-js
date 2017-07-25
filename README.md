@@ -126,11 +126,11 @@ JavaScriptObjectNotation
 
 ```javascript
 {
-    nom: "Karktor",
-    classes : ["paladin", "prètre"],
-    magies : {
-        feu : ["boule"],
-        glace : ["tempête","rayon"]
+    "nom": "Karktor",
+    "classes" : ["paladin", "prètre"],
+    "magies" : {
+        "feu" : ["boule"],
+        "glace" : ["tempête","rayon"]
     }
 }
 
@@ -142,19 +142,19 @@ personnage.classes[1];
 ```javascript
 [
     {
-        nom: "Karktor",
-        classes : ["paladin", "prètre"],
-        magies : {
-            feu : ["boule"],
-            glace : ["tempête","rayon"]
+        "nom": "Karktor",
+        "classes" : ["paladin", "prètre"],
+        "magies" : {
+            "feu" : ["boule"],
+            "glace" : ["tempête","rayon"]
         }
     },
     {
-        nom: "Korgan",
-        classes : ["voleur", "assasin"],
-        habilites : {
-            pieges : ["ours", "chausse-trapes"],
-            special : ["assassinat"]
+        "nom": "Korgan",
+        "classes" : ["voleur", "assasin"],
+        "habilites" : {
+            "pieges" : ["ours", "chausse-trapes"],
+            "special" : ["assassinat"]
         }
     }
 ]
