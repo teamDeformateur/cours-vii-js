@@ -49,6 +49,7 @@ var vendetta = new Film('V for Vendetta');
 matrix.sumup();
 vendetta.sumup();
 
+
 function FilmComplet(titre, annee, realisateurs, executif, delegue){
     this.titre = titre;
     this.annee = annee;
@@ -72,15 +73,20 @@ jupiter.sumup();
 
 var cloud = new Object();
 cloud.titre = 'Cloud atlas';
-var  bound = new Object({
+
+var bound = new Object(
+	{
 	titre: 'Bound',
 	infos: function(){
 		console.log('Titre : ' + this.titre);
+		}
 	}
-});
-bound.infos();
+);
 
+bound.infos();
+// clonage
 var speed = Object.create(bound);
+speed.titre = "Speed racer";
 speed.infos();
 
 // speed devient un FilmComplet
@@ -89,6 +95,7 @@ speed = new FilmComplet("Speed racer", 2008, [ 'Lilly Wachowski', 'Lana Wachowsk
 FilmComplet.prototype.afficherTitre = function(){
 	console.log('Titre du film : ' + this.titre);
 };
+
 // tous les FilmComplet disposent de la méthode
 jupiter.afficherTitre();
 speed.afficherTitre();
@@ -99,7 +106,7 @@ jupiter.afficherInfos = function(){
 // fonctionne
 jupiter.afficherInfos();
 // ne fonctionne pas
-speed.afficherInfos();
+//speed.afficherInfos();
 
 /*
  * Héritage
@@ -109,7 +116,10 @@ function FilmOscarise(titre, annee, realisateurs, executif, delegue, ceremonie){
 	FilmComplet.call(this, titre, annee, realisateurs, executif, delegue);
 	this.ceremonie = ceremonie;
 }
-//créer le lien entre prototypes
+
+var titanic = new FilmOscarise('', 2000, ['Cameron'], '', '', '');
+
+//créer le lien entre prototypes (clonage du prototype)
 FilmOscarise.prototype = Object.create(FilmComplet.prototype);
 // redéfinir le bon constructeur 
 FilmOscarise.prototype.constructor = FilmOscarise;
