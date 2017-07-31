@@ -15,67 +15,70 @@ function compareNumbers(a,b){
 }
 
 function findMaximum(ar){
-	//On utilise la fonction 'sort' de la bibliotheque Array.
-	//Elle prend en argument une fonction de comparaison (voir ci-dessus) décrivant la regle de tri.
-	//Dans le cas présent, il s'agit de les trier numériquement.
+	// On utilise la fonction 'sort' de la bibliotheque Array.
+	// Elle prend en argument une fonction de comparaison (voir ci-dessus)
+	// décrivant la regle de tri.
+	// Dans le cas présent, il s'agit de les trier numériquement.
 	ar.sort(compareNumbers);
-	//On affiche le dernier élement du vecteur trié, correspondant à la valeur max
+	// On affiche le dernier élement du vecteur trié, correspondant à la valeur
+	// max
 	console.log(ar[ar.length-1]);
 }
-//Fin Exo 1
+// Fin Exo 1
 
-//Exo 2
+// Exo 2
 	
 function indexation(ar){
-	//On passe tout en minuscule
+	// On passe tout en minuscule
 	ar.toLowerCase();
 	
-	//On enleve la ponctuation
+	// On enleve la ponctuation
 	ar.replace(new RegExp(":|!|\.|,|'","g"), "");
 	
-	//On récupère tous les mots dans un vecteur
+	// On récupère tous les mots dans un vecteur
 	let array_string = ar.split(" ");
 	
 	
-	//On crée deux tableaux de même taille, l'un contenant l'index des mots, l'autre contenant l'index des occurences correspondant
+	// On crée deux tableaux de même taille, l'un contenant l'index des mots,
+	// l'autre contenant l'index des occurences correspondant
 	let index_string = [];
 	let index_occurences = [];
 	
-	//On parcourt la liste des mots
+	// On parcourt la liste des mots
 	for ( let substring of array_string) {
-		//Cas ou le mot existe déjà dans la liste des index
+		// Cas ou le mot existe déjà dans la liste des index
 		if(index_string.includes(substring)){
 			index_occurences[index_string.indexOf(substring)]++;
 		}
 		
-		//Cas ou le mot n'existe pas encore dans la liste des index
+		// Cas ou le mot n'existe pas encore dans la liste des index
 		else{
 			index_string.push(substring);
 			index_occurences.push(1);
 		}
 	}
 	
-		//On affiche l'index des mots et occurence
+		// On affiche l'index des mots et occurence
 		for(let i=0; i<index_string.length; i++){
 			console.log("mot : " + index_string[i] + ", occurence : "+ index_occurences[i] + " fois.");
 		}
 	}
 	
-//Fin Exo 2
+// Fin Exo 2
 
 
-//Test Exo 1
+// Test Exo 1
 console.log("exo 1 :");
 let a = [1, 10, 1454, 21, 2];
 findMaximum(a);
 
 
-//Test Exo 2
+// Test Exo 2
 console.log("exo 2: ")
 let str = "Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.";
 indexation(str);
 
-//exercice 3
+// exercice 3
 
 function direBonjour(arg){
 	// on affiche dans la console les différents éléments de l'argument
