@@ -40,6 +40,7 @@ function stopTimer() {
   clearTimeout(timer);
   //J'arrête l'interval
   clearInterval(intervalID);
+  alert("Bravooo !!! Vous avez sauvé le monde"); 
 }
 
 //J'écoute le clic
