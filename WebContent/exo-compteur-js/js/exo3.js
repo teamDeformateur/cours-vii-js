@@ -86,6 +86,7 @@ function testColor(value) {
 	return startWithHash && lengthOk;
 }
 
+
 /*
  * Init
  */
